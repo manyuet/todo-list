@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script src="./js/index.js"></script>
     <title>Title</title>
 </head>
 <body>
 <div id="frame">
-<h1 style="text-align: center" >Todos</h1>
+    <h1 style="text-align: center">Todos</h1>
     <div class="text frame">
-    <input class="input text" onclick="inputEventDetail" type="text" placeholder="What needs to be done?" >
+
+        <button id="one-Click" onclick="oneClick()">\/</button>
+        <input class="input text" placeholder="What needs to be done?" value="">
+
     </div>
     <div id="event-frame">
-        <div class="option all">所有</div>
-        <div class="option todo" >待办</div>
-        <div class="option complete">已完成</div>
+        <div class="option all" onclick="buttonAll()" style="background-color: #b8c1c7">所有</div>
+        <div class="option todo" onclick="buttonTodo()">待办</div>
+        <div class="option complete" onclick="buttonComplete()">已完成</div>
     </div>
-    <div class="event-list">
-        <label><input name="event" type="radio" value="" style="margin-left: 10px">刚刚添加的待办事项1</label><br>
-        <label><input name="event" type="radio" value="" style="margin-left: 10px">刚刚添加的待办事项2</label>
-
+    <div id="event-list">
     </div>
-
+    <div id="itemsNum">
+    </div>
 </div>
-<script src="./js/index.js"></script>
-
 </body>
 </html>
