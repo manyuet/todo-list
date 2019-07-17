@@ -149,28 +149,31 @@ function changeButtonBgColor(classname) {
 function changeButtonBgColorToDefault(classname) {
     document.getElementsByClassName(classname)[0].style.backgroundColor = '#FFF';
 }
+const ALL_TAB_CLASS_NAME = 'option all';
+const TODO_TAB_CLASS_NAME = 'option todo';
+const COMPLETE_TAB_CLASS_NAME = 'option complete';
 
 function buttonAll() {
     currentTab = 'ALL';
-    changeButtonBgColor('option all');
-    changeButtonBgColorToDefault('option complete');
-    changeButtonBgColorToDefault('option todo');
+    changeButtonBgColor(ALL_TAB_CLASS_NAME);
+    changeButtonBgColorToDefault(COMPLETE_TAB_CLASS_NAME);
+    changeButtonBgColorToDefault(TODO_TAB_CLASS_NAME);
     showTodoItems();
 }
 
 function buttonTodo() {
     currentTab = 'TODO';
-    changeButtonBgColor('option todo');
-    changeButtonBgColorToDefault('option all');
-    changeButtonBgColorToDefault('option complete');
+    changeButtonBgColor(TODO_TAB_CLASS_NAME);
+    changeButtonBgColorToDefault(ALL_TAB_CLASS_NAME);
+    changeButtonBgColorToDefault(COMPLETE_TAB_CLASS_NAME);
     showTodoItems();
 }
 
 function buttonComplete() {
     currentTab = 'COMPLETE';
-    changeButtonBgColor('option complete');
-    changeButtonBgColorToDefault('option todo');
-    changeButtonBgColorToDefault('option all');
+    changeButtonBgColor(COMPLETE_TAB_CLASS_NAME);
+    changeButtonBgColorToDefault(TODO_TAB_CLASS_NAME);
+    changeButtonBgColorToDefault(ALL_TAB_CLASS_NAME);
     showTodoItems();
 
 }
