@@ -1,6 +1,6 @@
-#frame{
-   min-width: 450px;
-   max-width: 450px;
+#frame {
+    min-width: 450px;
+    max-width: 450px;
     min-height: 300px;
     max-height: 300px;
     margin-left: auto;
@@ -8,49 +8,52 @@
     padding-top: 100px;
     position: relative;
 }
-.input{
+
+.input {
     font-size: 15px;
     border-radius: 3px;
     border-color: #b8c1c7;
     outline: none;
     text-indent: 10px;
-    display: inline-block;
 }
-#one-Click{
-    /*display: inline-block;*/
-    margin-left:  70px;
-    margin-right:  auto;
+
+#one-Click {
+    margin-left: 70px;
+    margin-right: auto;
     border-radius: 3px;
     border-color: #b8c1c7;
     width: 30px;
-    height:35px;
+    height: 35px;
     padding: 10px;
     outline: none;
 }
-.text{
-    margin-left:  auto;
-    margin-right:  auto;
+
+.text {
+    margin-left: auto;
+    margin-right: auto;
     min-width: 260px;
-    /*max-width: 250px;*/
     min-height: 30px;
     max-height: 30px;
 }
-#event-frame{
-    margin-left:  auto;
-    margin-right:  auto;
+
+#event-frame {
+    margin-left: auto;
+    margin-right: auto;
     min-width: 340px;
     max-width: 340px;
     margin-top: 20px;
     display: flex;
     border-radius: 5px;
 }
-.option{
+
+.option {
     flex: 1;
     height: 25px;
     text-align: center;
     border-radius: 5px;
     border: solid #b8c1c7;
 }
+
 #event-list {
     min-width: 335px;
     max-width: 335px;
@@ -60,7 +63,8 @@
     margin-top: 2px;
     border: #b8c1c7 2px solid;
 }
-#itemsNum{
+
+#itemsNum {
     position: absolute;
     height: 25px;
     min-width: 335px;

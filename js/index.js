@@ -1,6 +1,7 @@
-let todoItems = [];
+let todoItems = JSON.parse(localStorage.getItem('todoItems')) || [];
 let madeALLActive = false;
 let currentTab = 'ALL';
+setTimeout("showTodoItems()",500);
 
 function insertTodoItemsHTML(todoItem, eventListDiv) {
     let checkBoxNode = document.createElement('input');//创建节点
@@ -27,9 +28,9 @@ function insertTodoItemsHTML(todoItem, eventListDiv) {
 
 function updateActiveItemNumHTML() {
     let activeItemNum = 0;
-    for(let todoItem of todoItems){
-        if(todoItem.active && !todoItem.hasDeleted){
-            activeItemNum ++;
+    for (let todoItem of todoItems) {
+        if (todoItem.active && !todoItem.hasDeleted) {
+            activeItemNum++;
         }
     }
     if (activeItemNum) {
@@ -52,6 +53,7 @@ function showTodoItems() {
     } else if (currentTab === 'COMPLETE') {
         showCompleteItems();
     }
+    localStorage.setItem('todoItems', JSON.stringify(todoItems));
 }
 
 function showAllItems() {
@@ -149,6 +151,7 @@ function changeButtonBgColor(classname) {
 function changeButtonBgColorToDefault(classname) {
     document.getElementsByClassName(classname)[0].style.backgroundColor = '#FFF';
 }
+
 const ALL_TAB_CLASS_NAME = 'option all';
 const TODO_TAB_CLASS_NAME = 'option todo';
 const COMPLETE_TAB_CLASS_NAME = 'option complete';
