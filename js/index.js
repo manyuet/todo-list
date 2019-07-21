@@ -1,7 +1,7 @@
 let todoItems = JSON.parse(localStorage.getItem('todoItems')) || [];
 let madeALLActive = false;
 let currentTab = 'ALL';
-setTimeout("showTodoItems()",500);
+setTimeout("showTodoItems()",500);//延迟执行
 
 function insertTodoItemsHTML(todoItem, eventListDiv) {
     let checkBoxNode = document.createElement('input');//创建节点
